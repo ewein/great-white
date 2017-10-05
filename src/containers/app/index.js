@@ -1,13 +1,18 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
+import Navigation from 'react-toolbox/lib/navigation/Navigation'
 import Home from '../home'
 import About from '../about'
 
+const routes = [
+  { label:'Home', raised: true, href:'/' },
+  { label:'About', raised: true, href:'/about-us' }
+];
+
 const App = () => (
-  <div>
+  <div className="app">
     <header>
-      <Link to="/">Home</Link>
-      <Link to="/about-us">About</Link>
+      <Navigation type='horizontal' routes={routes}/>
     </header>
 
     <main>

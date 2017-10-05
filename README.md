@@ -1,4 +1,5 @@
-# CRA Redux, React Router & Redux Thunk
+# React Redux Boilerplate
 
-* Tutorial: [Getting started with create-react-app, Redux, React Router & Redux Thunk](https://medium.com/@notrab/getting-started-with-create-react-app-redux-react-router-redux-thunk-d6a19259f71f)
-* Example: [View on Heroku](https://cra-redux-router-thunk.herokuapp.com/)
+A simple ready-made boilerplate for all of my projects. Customized version of create-react-app-redux with a minimal number of modules and dependencies to start your projects from the ground up.
+
+
