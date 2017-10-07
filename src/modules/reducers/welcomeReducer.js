@@ -1,18 +1,19 @@
-export default (state = {}, action) => {
+export default (state = false, action) => {
     switch (action.type) {
         case 'GOOD_COLOR':
-            return {
-                state,
-                isBadColor: false
-            }
+            console.log('good color reducer hit')
+            return state = action.colorState;
         
         case 'BAD_COLOR':
-            return {
-                state,
-                isBadColor: true
-            }
-  
+            console.log('bad color reducer hit')
+            return state = action.colorState;
+            
+        case 'RESET_FORM':
+            console.log('Form Reset')
+            return state = action.colorState;
+
         default:
+            console.log('default state')
             return state
     }
   }
