@@ -5,8 +5,8 @@ import Home from '../home'
 import About from '../about'
 
 const routes = [
-  { label:'Home', raised: true, href:'/' },
-  { label:'About', raised: true, href:'/about-us' }
+  { label:'Home', raised: true, href:'/', icon:'home' },
+  { label:'About', raised: true, href:'/about-us', icon:'info' }
 ];
 
 const App = () => (
