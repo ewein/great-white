@@ -26,7 +26,7 @@ class WelcomeBox extends Component {
 
     render() {
         //Inital component is a simple form as user hasn't selected a color
-        while (!this.state.isBadColor && !this.state.isGoodColor ) {
+        while (!this.props.isBadColor && !this.props.isGoodColor ) {
             return (
                 <div className="welcome-box">
                     <h3>Welcome to Redux Boilerplate!</h3>
@@ -38,7 +38,7 @@ class WelcomeBox extends Component {
             );
         }
 
-        if (!this.state.isBadColor && this.state.isGoodColor) {
+        if (!this.props.isBadColor && this.props.isGoodColor) {
             return <Dialog active={true} actions={this.actions} title='I am impressed!'><p className='good-color'>You picked an amazing color!</p></Dialog>
         } else if (this.state.isBadColor && !this.state.isGoodColor) {
             return <Dialog active={true} actions={this.actions} title='I am disappointed.'><p className='bad-color'>That is not the right color...</p></Dialog>
@@ -46,4 +46,11 @@ class WelcomeBox extends Component {
     }
 }
 
-export default connect()(WelcomeBox);
+const mapStateToProps = (state) => {
+    return {
+        isBadColor: state.welcome.isBadColor,
+        isGoodColor: state.welcome.isGoodColor
+    }
+}
+
+export default connect(mapStateToProps)(WelcomeBox)
